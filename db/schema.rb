@@ -40,13 +40,13 @@ ActiveRecord::Schema.define(:version => 20120221064544) do
   create_table "sniphs", :force => true do |t|
     t.string   "url"
     t.text     "content"
-    t.datetime "created_at",                                  :null => false
-    t.datetime "updated_at",                                  :null => false
+    t.datetime "created_at",                                                 :null => false
+    t.datetime "updated_at",                                                 :null => false
     t.string   "title"
-    t.boolean  "publique",                  :default => true
+    t.boolean  "publique",                                 :default => true
     t.integer  "user_id"
     t.datetime "last_tagging_attempted_at"
-    t.text     "cached_tag_list"
+    t.text     "cached_tag_list",           :limit => 255
   end
 
   add_index "sniphs", ["last_tagging_attempted_at"], :name => "index_sniphs_on_tagged_at"

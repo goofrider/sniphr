@@ -18,10 +18,15 @@ gem "slideshow"
 gem 'hoptoad_notifier'
 gem 'pg'
 gem 'activerecord-postgresql-adapter'
+gem 'sqlite3'
 gem 'thin'
+gem 'sass-rails'
 
 group :development do
   gem "psych"
+
+  gem 'meta_request'
+
 end
 
 group :test do
